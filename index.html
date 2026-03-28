@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Spice Garden — Fine Indian Cuisine</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo">🌿 Spice Garden</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Reserve a Table</a>
+    <button class="hamburger" id="hamburger">&#9776;</button>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="home">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-tagline">Est. 2008 · Authentic Flavors</p>
+      <h1 class="hero-title">Where Every Dish<br><em>Tells a Story</em></h1>
+      <p class="hero-subtitle">Experience the rich heritage of Indian cuisine crafted with hand-picked spices and generations of culinary tradition.</p>
+      <div class="hero-actions">
+        <a href="#menu" class="btn btn-primary">Explore Our Menu</a>
+        <a href="#contact" class="btn btn-outline">Reserve a Table</a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT ========== -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image-wrap">
+          <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80" alt="Restaurant interior" class="about-img"/>
+          <div class="about-badge">
+            <span class="badge-num">15+</span>
+            <span class="badge-text">Years of Excellence</span>
+          </div>
+        </div>
+        <div class="about-text">
+          <p class="section-label">Our Story</p>
+          <h2 class="section-title">A Journey of Flavors from the Heart of India</h2>
+          <p class="about-desc">Founded by Chef Arjun Sharma in 2008, Spice Garden was born from a simple dream — to bring the authentic tastes of his grandmother's kitchen to the world. Every recipe is a love letter to tradition, refined with modern technique.</p>
+          <p class="about-desc">We source our spices directly from small farms in Rajasthan, Kerala, and Tamil Nadu, ensuring every dish bursts with the real essence of India.</p>
+          <div class="about-stats">
+            <div class="stat">
+              <span class="stat-num">50+</span>
+              <span class="stat-label">Dishes on menu</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">200+</span>
+              <span class="stat-label">Happy guests daily</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">4.9★</span>
+              <span class="stat-label">Average rating</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== MENU ========== -->
+  <section class="menu-section" id="menu">
+    <div class="container">
+      <p class="section-label center">Our Menu</p>
+      <h2 class="section-title center">Crafted with Passion,<br>Served with Love</h2>
+      <div class="menu-tabs">
+        <button class="tab-btn active" data-tab="starters">Starters</button>
+        <button class="tab-btn" data-tab="mains">Mains</button>
+        <button class="tab-btn" data-tab="desserts">Desserts</button>
+        <button class="tab-btn" data-tab="drinks">Drinks</button>
+      </div>
+      <div class="menu-grid" id="menu-grid">
+        <!-- Filled by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== GALLERY ========== -->
+  <section class="gallery-section" id="gallery">
+    <div class="container">
+      <p class="section-label center">Visual Feast</p>
+      <h2 class="section-title center">Food Worth Photographing</h2>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item tall"><img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=600&q=80" alt="Dish 1"/><div class="gallery-overlay"><span>Butter Chicken</span></div></div>
+      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?w=600&q=80" alt="Dish 2"/><div class="gallery-overlay"><span>Biryani</span></div></div>
+      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600&q=80" alt="Dish 3"/><div class="gallery-overlay"><span>Samosa</span></div></div>
+      <div class="gallery-item wide"><img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=900&q=80" alt="Dish 4"/><div class="gallery-overlay"><span>Dal Makhani</span></div></div>
+      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1574653853027-5382a3d23a15?w=600&q=80" alt="Dish 5"/><div class="gallery-overlay"><span>Naan Bread</span></div></div>
+      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1606491956689-2ea866880c84?w=600&q=80" alt="Dish 6"/><div class="gallery-overlay"><span>Tandoori Chicken</span></div></div>
+    </div>
+  </section>
+
+  <!-- ========== WHY US ========== -->
+  <section class="why-section">
+    <div class="container">
+      <p class="section-label center">Why Choose Us?</p>
+      <h2 class="section-title center">The Spice Garden Difference</h2>
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-icon">🌿</div>
+          <h3>Fresh Ingredients</h3>
+          <p>We source organic produce and authentic spices directly from Indian farms — no shortcuts, ever.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">👨‍🍳</div>
+          <h3>Expert Chefs</h3>
+          <p>Our culinary team brings decades of experience from Michelin-starred kitchens across India and the UK.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">❤️</div>
+          <h3>Made with Love</h3>
+          <p>Every dish is prepared fresh to order. We believe food tastes better when it's made with genuine care.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">🚀</div>
+          <h3>Fast Delivery</h3>
+          <p>Hot food at your door within 30 minutes. We partner with trusted riders who share our standards.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT / RESERVATION ========== -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <p class="section-label">Find Us</p>
+          <h2 class="section-title">Visit Spice Garden</h2>
+          <div class="info-item">
+            <span class="info-icon">📍</span>
+            <div>
+              <strong>Address</strong>
+              <p>42 Curry Lane, Brick Lane<br>London E1 6RF</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <span class="info-icon">📞</span>
+            <div>
+              <strong>Phone</strong>
+              <p>+44 20 7946 0958</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <span class="info-icon">🕐</span>
+            <div>
+              <strong>Hours</strong>
+              <p>Mon–Fri: 12pm – 10pm<br>Sat–Sun: 11am – 11pm</p>
+            </div>
+          </div>
+          <div class="map-embed">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.843!2d-0.07159!3d51.51985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761d66955a3a91%3A0x8ca4c2a7c5b5b5b5!2sBrick%20Lane%2C%20London!5e0!3m2!1sen!2suk!4v1"
+              width="100%" height="200" style="border:0;border-radius:12px;" allowfullscreen="" loading="lazy">
+            </iframe>
+          </div>
+        </div>
+        <div class="contact-form-wrap">
+          <h3>Reserve a Table</h3>
+          <form id="reservation-form" class="reservation-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" placeholder="Your name" required/>
+                <span class="error-msg" id="name-error"></span>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="your@email.com" required/>
+                <span class="error-msg" id="email-error"></span>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="date">Date</label>
+                <input type="date" id="date" required/>
+                <span class="error-msg" id="date-error"></span>
+              </div>
+              <div class="form-group">
+                <label for="time">Time</label>
+                <select id="time" required>
+                  <option value="">Select time</option>
+                  <option>12:00 PM</option>
+                  <option>1:00 PM</option>
+                  <option>2:00 PM</option>
+                  <option>6:00 PM</option>
+                  <option>7:00 PM</option>
+                  <option>8:00 PM</option>
+                  <option>9:00 PM</option>
+                </select>
+                <span class="error-msg" id="time-error"></span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="guests">Number of Guests</label>
+              <select id="guests" required>
+                <option value="">Select guests</option>
+                <option>1 Guest</option>
+                <option>2 Guests</option>
+                <option>3 Guests</option>
+                <option>4 Guests</option>
+                <option>5+ Guests</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Special Requests (optional)</label>
+              <textarea id="message" rows="3" placeholder="Allergies, celebrations, seating preferences..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary full-width">Confirm Reservation</button>
+            <div id="form-success" class="form-success hidden">
+              ✅ Thank you! Your table has been reserved. We'll confirm via email shortly.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">🌿 Spice Garden</div>
+          <p>Bringing the authentic flavors of India to your table since 2008.</p>
+        </div>
+        <div class="footer-links">
+          <strong>Navigate</strong>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-social">
+          <strong>Follow Us</strong>
+          <div class="social-links">
+            <a href="#" class="social-btn">Instagram</a>
+            <a href="#" class="social-btn">Facebook</a>
+            <a href="#" class="social-btn">TripAdvisor</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Spice Garden. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
