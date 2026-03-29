@@ -6,11 +6,21 @@
   <title>Spice Garden — Fine Indian Cuisine</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/cinema.css" />
 </head>
 <body>
+<!-- Scroll progress bar -->
+<div id="scroll-progress"></div>
 
+<!-- Page Loader -->
+<div id="loader">
+  <div class="loader-logo">🌿 Spice Garden</div>
+  <div class="loader-bar-wrap">
+    <div class="loader-bar"></div>
+  </div>
+</div>
   <!-- ========== NAVBAR ========== -->
   <nav class="navbar" id="navbar">
     <div class="nav-logo">🌿 Spice Garden</div>
@@ -107,14 +117,30 @@
       <div class="gallery-item"><img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600&q=80" alt="Dish 3"/><div class="gallery-overlay"><span>Samosa</span></div></div>
       <div class="gallery-item wide"><img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=900&q=80" alt="Dish 4"/><div class="gallery-overlay"><span>Dal Makhani</span></div></div>
       <div class="gallery-item"><img src="https://images.unsplash.com/photo-1574653853027-5382a3d23a15?w=600&q=80" alt="Dish 5"/><div class="gallery-overlay"><span>Naan Bread</span></div></div>
-      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=600&q=80" alt="Dish 6"/><div class="gallery-overlay"><span>Gulab Jamun</span></div></div>
+      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1606491956689-2ea866880c84?w=600&q=80" alt="Dish 6"/><div class="gallery-overlay"><span>Tandoori Chicken</span></div></div>
     </div>
   </section>
+
+<!-- ========== MARQUEE ========== -->
+<div class="marquee-section">
+  <div class="marquee-track">
+    <span class="marquee-item">Authentic Flavors <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Hand-Picked Spices <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Est. 2008 <span class="marquee-dot"></span></span>
+    <span class="marquee-item">200+ Guests Daily <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Fine Indian Cuisine <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Authentic Flavors <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Hand-Picked Spices <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Est. 2008 <span class="marquee-dot"></span></span>
+    <span class="marquee-item">200+ Guests Daily <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Fine Indian Cuisine <span class="marquee-dot"></span></span>
+  </div>
+</div>
 
   <!-- ========== WHY US ========== -->
   <section class="why-section">
     <div class="container">
-      <p class="section-label center">Why Choose Us?</p>
+      <p class="section-label center">Why Choose Us</p>
       <h2 class="section-title center">The Spice Garden Difference</h2>
       <div class="why-grid">
         <div class="why-card">
@@ -269,6 +295,13 @@
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <!-- GSAP Animation Library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/SplitText.min.js"></script>
+
+<!-- তোমার existing script এর আগে রাখো -->
+<script src="js/main.js"></script>
+<script src="js/cinema.js"></script>  <!-- নতুন file -->
 </body>
 </html>

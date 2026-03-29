@@ -1,0 +1,246 @@
+/* ============================================
+   CINEMA.CSS — Dark cinematic advanced effects
+   ============================================ */
+
+/* --- Page loader --- */
+#loader {
+  position: fixed;
+  inset: 0;
+  background: #0a0602;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 24px;
+}
+#loader .loader-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.2rem;
+  color: #E8B84B;
+  opacity: 0;
+  animation: loaderFade 0.8s 0.3s ease forwards;
+}
+#loader .loader-bar-wrap {
+  width: 200px;
+  height: 1px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 2px;
+  overflow: hidden;
+}
+#loader .loader-bar {
+  height: 100%;
+  background: #C8902A;
+  width: 0%;
+  animation: loaderFill 1.8s 0.5s cubic-bezier(0.77,0,0.18,1) forwards;
+}
+@keyframes loaderFade {
+  to { opacity: 1; }
+}
+@keyframes loaderFill {
+  to { width: 100%; }
+}
+
+/* --- Noise texture overlay (cinematic grain) --- */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9000;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-size: 200px 200px;
+}
+
+/* --- Split text reveal base --- */
+.reveal-text .char {
+  display: inline-block;
+  overflow: hidden;
+}
+.split-line {
+  overflow: hidden;
+  display: block;
+}
+
+/* --- Hero cinematic upgrade --- */
+.hero {
+  background: #0a0602;
+}
+.hero-overlay {
+  background: linear-gradient(
+    160deg,
+    rgba(10,6,2,0.88) 0%,
+    rgba(10,6,2,0.5) 50%,
+    rgba(192,57,43,0.15) 100%
+  );
+}
+
+/* --- Parallax image wrapper --- */
+.parallax-wrap {
+  overflow: hidden;
+  border-radius: var(--radius);
+}
+.parallax-wrap img {
+  transform-origin: center;
+  will-change: transform;
+}
+
+/* --- Section dark cinematic --- */
+.cinematic-section {
+  position: relative;
+  background: #0f0b06;
+  overflow: hidden;
+}
+.cinematic-section::before {
+  content: '';
+  position: absolute;
+  top: -1px; left: 0; right: 0;
+  height: 120px;
+  background: linear-gradient(to bottom, #1A1208, transparent);
+  z-index: 1;
+  pointer-events: none;
+}
+.cinematic-section::after {
+  content: '';
+  position: absolute;
+  bottom: -1px; left: 0; right: 0;
+  height: 120px;
+  background: linear-gradient(to top, #1A1208, transparent);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* --- Horizontal scrolling marquee --- */
+.marquee-section {
+  padding: 40px 0;
+  background: #0f0b06;
+  border-top: 1px solid rgba(200,144,42,0.12);
+  border-bottom: 1px solid rgba(200,144,42,0.12);
+  overflow: hidden;
+  white-space: nowrap;
+}
+.marquee-track {
+  display: inline-flex;
+  gap: 0;
+  animation: marqueeScroll 18s linear infinite;
+}
+.marquee-track:hover { animation-play-state: paused; }
+.marquee-item {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  font-style: italic;
+  color: #ffffffef;
+  padding: 0 40px;
+  display: inline-flex;
+  align-items: center;
+  gap: 40px;
+  transition: color 0.3s ease;
+}
+.marquee-item:hover { color: rgba(219, 149, 21, 0.751); }
+.marquee-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #C8902A;
+  opacity: 0.5;
+  flex-shrink: 0;
+}
+@keyframes marqueeScroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* --- Scroll progress bar --- */
+#scroll-progress {
+  position: fixed;
+  top: 0; left: 0;
+  height: 2px;
+  background: linear-gradient(to right, #C8902A, #E8B84B);
+  z-index: 10000;
+  width: 0%;
+  transition: width 0.1s linear;
+  box-shadow: 0 0 8px rgba(200,144,42,0.6);
+}
+
+/* --- Section number labels (cinematic style) --- */
+.section-number {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 300;
+  letter-spacing: 0.3em;
+  color: rgba(200,144,42,0.4);
+  margin-bottom: 16px;
+  display: block;
+}
+
+/* --- Image reveal clip animation --- */
+.img-reveal-wrap {
+  overflow: hidden;
+  border-radius: var(--radius);
+}
+.img-reveal-wrap img {
+  transform: scale(1.15);
+  transform-origin: center;
+  will-change: transform;
+}
+
+/* --- Gold line divider --- */
+.gold-divider {
+  width: 48px;
+  height: 1px;
+  background: var(--gold);
+  margin: 20px 0;
+  opacity: 0.6;
+}
+.gold-divider.center { margin: 20px auto; }
+
+/* --- Stats counter style upgrade --- */
+.stat-num {
+  font-size: 2.4rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+/* --- Why section dark version --- */
+.why-section {
+  background: linear-gradient(180deg, #FFF8EE 0%, #FDF2E0 100%);
+  position: relative;
+}
+
+/* --- Gallery hover cinematic overlay upgrade --- */
+.gallery-overlay {
+  background: linear-gradient(
+    to top,
+    rgba(10,6,2,0.92) 0%,
+    rgba(10,6,2,0.4) 50%,
+    transparent 100%
+  );
+}
+.gallery-overlay span {
+  font-size: 1.3rem;
+  letter-spacing: 0.05em;
+  transform: translateY(8px);
+  transition: transform 0.4s ease;
+}
+.gallery-item:hover .gallery-overlay span {
+  transform: translateY(0);
+}
+
+/* --- Animated underline on section labels --- */
+.section-label {
+  position: relative;
+  display: inline-block;
+}
+
+/* --- Footer dark upgrade --- */
+.footer {
+  background: #080502;
+  border-top: 1px solid rgba(200,144,42,0.1);
+}
+
+/* --- Smooth scroll feel --- */
+html {
+  scroll-behavior: auto; /* GSAP will handle this */
+}
+
